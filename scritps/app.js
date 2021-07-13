@@ -5,21 +5,26 @@
 //level up
 
 const avatar = {
-  meditate: 100,
+  meditate: 80,
   train: 80,
   eat: 80,
   levelUP: 5,
 
-
-  timer: null,
-  meditateReduce() {
-    this.meditate = setInterval(this.reduceTime, 1000);
+  timeSub: null,
+  reduceLife() {
+    avatar.timeSub = setInterval(function(){
+      avatar.meditate = avatar.meditate -5;
+      $('#medBar').text(`Meditation: ${avatar.meditate}`)
+      return(avatar.meditate);
+    }, 1000);
   },
-  reduceTime() {
-    avatar.meditate--;
-    $("#med").text(`meditation: ${this.meditate}`);
-  },
+  
 }
+
+
+
+
+
 
 
 //BUTTON FUNCTIONS.
@@ -27,7 +32,8 @@ const avatar = {
 $("#meditateButton").click(function() {
   if(avatar.meditate < 100) {
     avatar.meditate = avatar.meditate +5;
-    console.log(avatar.meditate);
+    $('#medBar').text(`Meditation: ${avatar.meditate}`)
+    return(avatar.meditate);
   }  
 });
 
