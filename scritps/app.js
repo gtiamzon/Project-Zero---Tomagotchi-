@@ -5,10 +5,10 @@
 //level up
 
 const avatar = {
-  meditate: 100,
-  train: 100,
-  hunger: 100,
-  levelUP: 5,
+  meditate: 10,
+  train: 10,
+  hunger: 10,
+  levelUP: 10,
 
   startGame(){
     this.reduceMedLife();
@@ -16,33 +16,44 @@ const avatar = {
     this.reduceHungerLife();
   },
 
-  timeSub: null,
+  timeMedSub: null,
   
   reduceMedLife() {
-    avatar.timeSub = setInterval(function(){
+    avatar.timeMedSub = setInterval(function(){
       avatar.meditate = avatar.meditate -1;
       $('#medBar').text(`Meditation: ${avatar.meditate}`);
-      return(avatar.meditate);
+      if(avatar.meditate <=0 ){
+        alert(`you died`);
+        clearInterval(avatar.timeMedSub);
+      }
     }, 700);
   },
+
+  timeTrainSub: null,
 
   reduceTrainLife() {
-    avatar.timeSub = setInterval(function(){
+    avatar.timeTrainSub = setInterval(function(){
       avatar.train = avatar.train -1; 
       $('#trainBar').text(`Training: ${avatar.train}`);
-      return(avatar.meditate);
+      if(avatar.train <=0 ){
+        alert(`you died`);
+        clearInterval(avatar.timeTrainSub);
+      }
     }, 700);
   },
 
+timeHungerSub:null, 
+
   reduceHungerLife() {
-    avatar.timeSub = setInterval(function(){
+    avatar.timeHungerSub = setInterval(function(){
       avatar.hunger = avatar.hunger - 1;
       $('#hungerBar').text(`Hunger: ${avatar.hunger}`);
+      if(avatar.hunger <=0 ){
+        alert(`you died`);
+        clearInterval(avatar.timeHungerSub);
+      }
     }, 700);
-  }
-
-
-  
+  },
 }
 
 
