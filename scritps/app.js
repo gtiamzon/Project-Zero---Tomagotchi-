@@ -2,11 +2,11 @@
 //meditate
 //train
 //eat
-//level up
+//NOTE NEED IN GAME TIMER FOR EVOLUTION.
 
 const avatar = {
-  meditate: 10,
-  train: 10,
+  meditate: 100,
+  train: 100,
   hunger: 10,
   levelUP: 10,
 
@@ -24,9 +24,11 @@ const avatar = {
       $('#medBar').text(`Meditation: ${avatar.meditate}`);
       if(avatar.meditate <=0 ){
         alert(`you died`);
+        clearInterval(avatar.timeHungerSub);
+        clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
       }
-    }, 700);
+    }, 400);
   },
 
   timeTrainSub: null,
@@ -37,9 +39,11 @@ const avatar = {
       $('#trainBar').text(`Training: ${avatar.train}`);
       if(avatar.train <=0 ){
         alert(`you died`);
+        clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
+        clearInterval(avatar.timeMedSub);
       }
-    }, 700);
+    }, 400);
   },
 
 timeHungerSub:null, 
@@ -51,8 +55,10 @@ timeHungerSub:null,
       if(avatar.hunger <=0 ){
         alert(`you died`);
         clearInterval(avatar.timeHungerSub);
+        clearInterval(avatar.timeTrainSub);
+        clearInterval(avatar.timeMedSub);
       }
-    }, 700);
+    }, 400);
   },
 }
 
