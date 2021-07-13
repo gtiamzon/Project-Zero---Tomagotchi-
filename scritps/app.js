@@ -5,19 +5,43 @@
 //level up
 
 const avatar = {
-  meditate: 80,
-  train: 80,
-  eat: 80,
+  meditate: 100,
+  train: 100,
+  hunger: 100,
   levelUP: 5,
 
-  timeSub: null,
-  reduceLife() {
-    avatar.timeSub = setInterval(function(){
-      avatar.meditate = avatar.meditate -5;
-      $('#medBar').text(`Meditation: ${avatar.meditate}`)
-      return(avatar.meditate);
-    }, 1000);
+  startGame(){
+    this.reduceMedLife();
+    this.reduceTrainLife();
+    this.reduceHungerLife();
   },
+
+  timeSub: null,
+  
+  reduceMedLife() {
+    avatar.timeSub = setInterval(function(){
+      avatar.meditate = avatar.meditate -1;
+      $('#medBar').text(`Meditation: ${avatar.meditate}`);
+      return(avatar.meditate);
+    }, 700);
+  },
+
+  reduceTrainLife() {
+    avatar.timeSub = setInterval(function(){
+      avatar.train = avatar.train -1; 
+      $('#trainBar').text(`Training: ${avatar.train}`);
+      return(avatar.meditate);
+    }, 700);
+  },
+
+  reduceHungerLife() {
+    avatar.timeSub = setInterval(function(){
+      avatar.hunger = avatar.hunger - 1;
+      $('#hungerBar').text(`Hunger: ${avatar.hunger}`);
+    }, 700);
+  }
+
+
   
 }
 
@@ -40,13 +64,15 @@ $("#meditateButton").click(function() {
 $("#trainButton").click(function() {
   if(avatar.train < 100) {
     avatar.train = avatar.train +5;
-    console.log(avatar.train);
+    $('#trainBar').text(`Training: ${avatar.train}`)
+    return(avatar.train);
   }  
 });
 
-$("#eatButton").click(function() {
-  if(avatar.eat < 100) {
-    avatar.eat = avatar.eat +5;
-    console.log(avatar.eat);
+$("#hungerButton").click(function() {
+  if(avatar.hunger < 100) {
+    avatar.hunger = avatar.hunger +5;
+    $('#hungerBar').text(`Hunger: ${avatar.hunger}`)
+    return(avatar.hunger);
   }  
 });
