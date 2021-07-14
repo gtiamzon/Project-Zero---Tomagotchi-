@@ -141,4 +141,7 @@ $("#hungerButton").click(function() {
   }  
 });
 
-$('#lightSwitch').
+$('#lightSwitch').click(function(){
+  $(".image").toggleClass("active");
+  }
+);
