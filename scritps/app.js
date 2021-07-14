@@ -5,6 +5,7 @@
 //NOTE NEED IN GAME TIMER FOR EVOLUTION.
 
 const avatar = {
+  Name: null,
   meditate: 100,
   train: 100,
   hunger: 100,
@@ -46,6 +47,12 @@ const avatar = {
     };
   },
 
+  updateName() {
+    const newName = $('#textInput').val();
+    $('#name').text(`Name: ${newName}`);
+    $('#textInput').hide();
+  },
+
 
   // Meditation Number Decrease
   timeMedSub: null,
@@ -61,7 +68,7 @@ const avatar = {
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
       }
-    }, 100);
+    }, 500);
   },
 
   // Training Number Decrease
@@ -78,7 +85,7 @@ const avatar = {
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
       }
-    }, 1000);
+    }, 500);
   },
 
   // Hunger Number Decrease
@@ -95,7 +102,7 @@ const avatar = {
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
       }
-    }, 1000);
+    }, 500);
   },
 };
 
@@ -106,6 +113,7 @@ $(".start").click(function(){
   avatar.reduceTrainLife();
   avatar.reduceHungerLife();
   avatar.timerStart();
+  avatar.updateName();
 }),
 
 //BUTTON FUNCTIONS.
@@ -132,3 +140,5 @@ $("#hungerButton").click(function() {
     return(avatar.hunger);
   }  
 });
+
+$('#lightSwitch').
