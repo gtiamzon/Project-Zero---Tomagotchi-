@@ -7,15 +7,46 @@
 const avatar = {
   meditate: 100,
   train: 100,
-  hunger: 10,
-  levelUP: 10,
+  hunger: 100,
+  level: 1,
 
-  startGame(){
-    this.reduceMedLife();
-    this.reduceTrainLife();
-    this.reduceHungerLife();
+  //TIMER
+  timer: null,
+  time: 0,
+  timerStart() {
+    avatar.timer = setInterval(function(){
+      avatar.time= avatar.time +1;
+      avatar.levelUP();
+      avatar.transform();
+      avatar.finalForm();
+      $('#timer').text(`Timer: ${avatar.time}`);
+    }, 1000);
+  },
+  
+  //LEVEL UP
+  levelUP(){
+    if(avatar.time % 10 === 0 ){
+      avatar.level = avatar.level +1;
+      $('#level').text(`Level: ${avatar.level}`);
+    };
   },
 
+  //IMAGE CHANGE/ TRANSFORM
+
+  transform() {
+    if(avatar.level >= 5){
+    $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
+    };
+  },
+  
+  finalForm() {
+    if(avatar.level >= 10){
+    $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
+    };
+  },
+
+
+  // Meditation Number Decrease
   timeMedSub: null,
   
   reduceMedLife() {
@@ -31,6 +62,7 @@ const avatar = {
     }, 400);
   },
 
+  // Training Number Decrease
   timeTrainSub: null,
 
   reduceTrainLife() {
@@ -46,7 +78,8 @@ const avatar = {
     }, 400);
   },
 
-timeHungerSub:null, 
+  // Hunger Number Decrease
+  timeHungerSub:null, 
 
   reduceHungerLife() {
     avatar.timeHungerSub = setInterval(function(){
@@ -60,16 +93,18 @@ timeHungerSub:null,
       }
     }, 400);
   },
-}
+};
 
 
-
-
-
-
+//START BUTTON
+$(".start").click(function(){
+  avatar.reduceMedLife();
+  avatar.reduceTrainLife();
+  avatar.reduceHungerLife();
+  avatar.timerStart();
+}),
 
 //BUTTON FUNCTIONS.
-//ADD IF STATEMENT TO WHERE number is 100, do not add 
 $("#meditateButton").click(function() {
   if(avatar.meditate < 100) {
     avatar.meditate = avatar.meditate +5;
