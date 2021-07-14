@@ -34,14 +34,15 @@ const avatar = {
   //IMAGE CHANGE/ TRANSFORM
 
   transform() {
-    if(avatar.level >= 5){
+    if(avatar.level >= 2){
     $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
     };
   },
   
   finalForm() {
-    if(avatar.level >= 10){
+    if(avatar.level >= 3){
     $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
+    $('h1').text('YOU ARE THE AVATAR');
     };
   },
 
@@ -59,7 +60,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
       }
-    }, 400);
+    }, 1000);
   },
 
   // Training Number Decrease
@@ -75,7 +76,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
       }
-    }, 400);
+    }, 1000);
   },
 
   // Hunger Number Decrease
@@ -91,7 +92,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
       }
-    }, 400);
+    }, 1000);
   },
 };
 
