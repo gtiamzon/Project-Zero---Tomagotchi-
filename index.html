@@ -15,20 +15,30 @@
 <body>
   <header>
     <h1>BECOME THE AVATAR</h1>
-    <h3 id="name">NAME: Aang</h3>
-    <h2 id="level">Level: 42069</h2>
+    <div class="rowTwo">
+      <h3 id="name">NAME: </h3>
+      <h2 id="level">Level: 1</h2>
+    </div>
+    <div class="rowThree">
+      <button class="start">START</button>
+      <input type="text" id="textInput" required
+      size="10" placeholder="Your Name!!!">
+      <div id="timer">Time:</div>
+    </div>
+    
   </header>
   <main>
     <img id="img"src = "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
   </main>
-  <div>
-    <p id= "med">Meditation: 100</p>
-    <p>Training: 100</p>
-    <p>Hunger: 100</p>
+  <div class="stats">
+    <p id= "medBar">Meditation: 100</p>
+    <p id= "trainBar">Training: 100</p>
+    <p id= "hungerBar">Hunger: 100</p>
   </div>
   <nav>
     <button id="meditateButton">Meditate</button>
     <button id="trainButton">Train</button>
-    <button id="eatButton">Eat</button>
+    <button id="hungerButton">Eat</button>
+    <button id="lightSwitch">Light</button>
   </nav>
 </body>
