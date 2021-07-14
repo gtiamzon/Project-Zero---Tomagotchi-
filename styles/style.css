@@ -4,4 +4,28 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   }
+
+.rowTwo {
+  display: flex;
+  justify-content: center;
+  gap: 40%;
+}
+
+.rowThree {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+#img {
+  max-width: 500px;
+}
+.stats{
+  display: flex;
+  gap: 5%;
+  text-align: center;
+}
