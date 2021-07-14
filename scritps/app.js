@@ -59,8 +59,9 @@ const avatar = {
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
+        clearInterval(avatar.timer);
       }
-    }, 1000);
+    }, 100);
   },
 
   // Training Number Decrease
@@ -75,6 +76,7 @@ const avatar = {
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
+        clearInterval(avatar.timer);
       }
     }, 1000);
   },
@@ -91,6 +93,7 @@ const avatar = {
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
+        clearInterval(avatar.timer);
       }
     }, 1000);
   },
