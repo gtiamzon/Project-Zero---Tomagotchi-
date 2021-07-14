@@ -28,7 +28,7 @@ const avatar = {
   levelUP(){
     if(avatar.time % 10 === 0 ){
       avatar.level = avatar.level +1;
-      $('#level').text(`Level: ${avatar.level}`);
+      $('#levelInput').text(`${avatar.level}`);
     };
   },
 
@@ -49,7 +49,7 @@ const avatar = {
 
   updateName() {
     const newName = $('#textInput').val();
-    $('#name').text(`Name: ${newName}`);
+    $('#nameInput').text(`${newName}`);
     $('#textInput').hide();
   },
 
@@ -108,7 +108,7 @@ const avatar = {
 
 
 //START BUTTON
-$(".start").click(function(){
+$("#start").click(function(){
   avatar.reduceMedLife();
   avatar.reduceTrainLife();
   avatar.reduceHungerLife();
@@ -143,5 +143,6 @@ $("#hungerButton").click(function() {
 
 $('#lightSwitch').click(function(){
   $(".image").toggleClass("active");
+
   }
 );

@@ -1,5 +1,5 @@
 *{
-  border: 2px solid blue
+  border: 2px solid blue 
 }
 body {
   display: flex;
@@ -9,27 +9,40 @@ body {
   text-align: center;
   }
 
+h1 {
+  padding: 20px;
+}
+
 .rowTwo {
   display: flex;
   justify-content: center;
-  gap: 40%;
+  gap: 20%;
+  transform:translate(0px, -60px);
 }
 
 .rowThree {
   display: flex;
   justify-content: center;
-  gap: 10%;
+  gap: 30%;
+  transform:translate(0px, -40px);
+}
+
+#timer {
+  transform: translate(0px, 10px);
 }
 
 #img {
   max-width: 500px;
+  max-height: fit-content;
 }
 
 .image{
-  background-color: blue;
+  background-color:white;
 }
 .image.active {
-  background-color: deeppink;
+  background-color: grey;
+  filter: brightness(30%);
+
 }
 
 .stats{
