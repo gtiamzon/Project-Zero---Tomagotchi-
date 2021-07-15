@@ -74,7 +74,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
-        
+        $(`#img`).toggleClass(`active`);
       }
     }, 300);
   },
@@ -92,6 +92,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
+        $(`#img`).toggleClass(`active`);
       }
     }, 200);
   },
@@ -109,6 +110,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
+        $(`#img`).toggleClass(`active`);
       }
     }, 100);
   },
@@ -122,6 +124,7 @@ $("#start").click(function(){
   avatar.reduceHungerLife();
   avatar.timerStart();
   avatar.updateName();
+  $(`#img`).toggleClass(`active`);
 }),
 
 //BUTTON FUNCTIONS.
@@ -151,6 +154,5 @@ $("#hungerButton").click(function() {
 
 $('#lightSwitch').click(function(){
   $("#image").toggleClass("active");
-
   }
 );
