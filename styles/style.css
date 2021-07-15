@@ -15,6 +15,7 @@ body {
   main{
     max-height: 100vh;
     position: fixed;
+    min-width: 823px;
     
   }
 
@@ -29,12 +30,18 @@ body {
   padding-bottom: 30px;
 }
 
+#start {
+ margin-left: 150px;
+}
+
 #nameInput {
-  width: 150px;
+  width: 250px;
+  padding-top: 20px;
 }
 
 #levelInput{
   width: 150px;
+  padding-top: 20px;
 }
 
 .rowThree {
@@ -56,14 +63,15 @@ body {
   align-items: center;
 }
 
+
 #img {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 #img.active{
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
 
   animation: headShake;
   animation-duration: 3s;
@@ -99,5 +107,12 @@ body {
 
 nav{
   padding: 20px;
+}
+
+@media screen and (max-width:375px)  {
+  .main {
+    background-color: red !important;
+    width: 100px !important;
+  }
 }
 

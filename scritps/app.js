@@ -35,15 +35,17 @@ const avatar = {
   //IMAGE CHANGE/ TRANSFORM
 
   transform() {
-    if(avatar.level >= 5){
+    if(avatar.level >= 2){
     $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
+    $('body').css('color', 'palegreen');
     };
   },
   
   finalForm() {
-    if(avatar.level >= 10){
+    if(avatar.level >= 3){
     $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
     $('h1').text('YOU ARE THE AVATAR');
+    $('body').css('color', 'orange');
     };
   },
 
@@ -125,6 +127,7 @@ $("#start").click(function(){
   avatar.timerStart();
   avatar.updateName();
   $(`#img`).toggleClass(`active`);
+  $(`#start`).hide();
 }),
 
 //BUTTON FUNCTIONS.
