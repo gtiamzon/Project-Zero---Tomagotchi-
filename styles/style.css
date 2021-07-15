@@ -45,14 +45,16 @@ h1 {
 #img.active {
   max-width: 500px;
   max-height: 500px;
-  animation: headShake;
-  animation-duration: 3s;
+  animation: shakeX;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
+
 }
 #image {
   background-color:white;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 #image.active {
   background-color: grey;

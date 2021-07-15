@@ -13,7 +13,7 @@ const avatar = {
       avatar.levelUP();
       avatar.transform();
       avatar.finalForm();
-      $('#timer').text(`Timer: ${avatar.time}`);
+      $('#timer').text(`TIME: ${avatar.time}`);
     }, 1000);
   },
   //LEVEL UP
@@ -28,6 +28,7 @@ const avatar = {
     if(avatar.level >= 2){
       $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
       $('body').css('color', 'palegreen');
+      $('#img.active').css({'animation': 'swing','animation-duration': '4s','animation-iteration-count': 'infinite'});
     };
   },
   //IMAGE CHANGE FINAL FORM
@@ -36,7 +37,7 @@ const avatar = {
       $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
       $('h1').text('YOU ARE THE AVATAR');
       $('body').css('color', 'orange');
-      $('#img.active').css('animation-duration', '1s')
+      $('#img.active').css({'animation': 'tada','animation-duration': '2s','animation-iteration-count': 'infinite'});
     };
   },
   //NAME INPUT UPDATE
@@ -50,6 +51,7 @@ const avatar = {
     $('h1').text('THE FIRE NATION HAS TAKEN OVER');
     $('body').css('color', 'red');
     $('#img').attr("src", "https://i.imgur.com/JkMp8L8.jpeg");
+    $('#timer').text(`YOU LASTED ${avatar.time} SECONDS`)
   },
   // Meditation Number Decrease
   timeMedSub: null,
@@ -63,7 +65,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
-        $(`#img`).toggleClass(`active`);
+        $('#img.active').css({'animation': 'none',});
       }
     }, 2000);
   },
@@ -79,7 +81,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
-        $(`#img`).toggleClass(`active`);
+        $('#img.active').css({'animation': 'none',});
       }
     }, 1900);
   },
@@ -95,7 +97,7 @@ const avatar = {
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
-        $(`#img`).toggleClass(`active`);
+        $('#img.active').css({'animation': 'none',});
       }
     }, 1000);
   },
