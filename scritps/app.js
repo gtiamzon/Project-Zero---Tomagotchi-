@@ -35,19 +35,17 @@ const avatar = {
   //IMAGE CHANGE/ TRANSFORM
 
   transform() {
-    if(avatar.level >= 2){
+    if(avatar.level >= 5){
     $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
     };
   },
   
   finalForm() {
-    if(avatar.level >= 3){
+    if(avatar.level >= 10){
     $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
     $('h1').text('YOU ARE THE AVATAR');
     };
   },
-
-  //https://www.nicepng.com/png/full/157-1575405_aang-png.png
 
   updateName() {
     const newName = $('#textInput').val();
@@ -59,8 +57,9 @@ const avatar = {
 
   death() {
     $('h1').text('THE FIRE NATION HAS TAKEN OVER');
+    $('body').css('color', 'red');
+    $('#img').attr("src", "https://i.imgur.com/JkMp8L8.jpeg");
   },
-
 
   // Meditation Number Decrease
   timeMedSub: null,
@@ -77,7 +76,7 @@ const avatar = {
         clearInterval(avatar.timer);
         
       }
-    }, 500);
+    }, 300);
   },
 
   // Training Number Decrease
@@ -94,7 +93,7 @@ const avatar = {
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
       }
-    }, 500);
+    }, 200);
   },
 
   // Hunger Number Decrease
@@ -111,7 +110,7 @@ const avatar = {
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
       }
-    }, 500);
+    }, 100);
   },
 };
 
@@ -151,7 +150,7 @@ $("#hungerButton").click(function() {
 });
 
 $('#lightSwitch').click(function(){
-  $(".image").toggleClass("active");
+  $("#image").toggleClass("active");
 
   }
 );

@@ -12,9 +12,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <!-- Main JS -->
   <script src="scritps/app.js" defer></script>
-
+</head>
 <body>
-  <header class="container">
+<main class="container">
+  <section class="container">
     <h1>BECOME THE AVATAR</h1>
     <div class="rowTwo">
       <h3 id="name" class ="container dark">
@@ -27,33 +28,33 @@
       </h3>
     </div>
     <div class="rowThree">
-      <input type="text" id="textInput" class="input" placeholder="ENTER NAME HERE!">
-      <div id="timer">Time:</div>
+      <input type="text" id="textInput" class="input" placeholder="ENTER NAME HERE">
+      <p id="timer">Time:</p>
     </div>
     <div class="rowFour">
       <button  id="start" class="btn">START</button>
     </div>
     
-  </header>
+  </section>
   
-  <main class= "image">
+  <main id="image" class= "container">
     <img id="img"src = "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
   </main>
   <div id="stats" class="container">
 
       <div class="progress primary">
         <div class="bar" id="medNumber"></div>
-        <div class="subtitle">Meditation</div>
+        <!-- <div class="subtitle">Meditation</div> -->
       </div>
 
       <div class="progress success">
         <div class="bar" id="trainNumber"></div>
-        <div class="subtitle">Training</div>
+        <!-- <div class="subtitle">Training</div> -->
       </div>
 
       <div class="progress warning">
         <div class="bar" id="hungerNumber"></div>
-        <div class="subtitle">warning</div>
+        <!-- <div class="subtitle">Hunger</div> -->
       </div>
   </div>
   <nav>
@@ -62,4 +63,6 @@
     <button id="hungerButton" class="btn warning">Eat</button>
     <button id="lightSwitch" class="btn error">Light</button>
   </nav>
+</main>
 </body>
+</html>
