@@ -1,20 +1,18 @@
 # Project-Zero---Tomagotchi-
 Create a repo for your tomagotchi pet NOTE
 Make a commit after you finish each one of the following: 
-Instatiate your Tomagotchi
-Display a character of your choice on the screen to represent your pet
+Instatiate your Tomagotchi NOTE
+Display a character of your choice on the screen to represent your pet NOTE
 Display the following metrics for your pet:
-- Hunger (1-10 scale)
-- Sleepiness (1-10 scale)
-- Boredom (1-10 scale)
-- Age
-Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
-Add the ability to name your pet.
-Style the page.
-Increase your pet's age every x minutes
-Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
-You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-Morph your pet at certain ages.
+- Hunger (1-10 scale) NOTE 
+- Age NOTE 
+Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. NOTE 
+Add the ability to name your pet. NOTE 
+Style the page. 
+Increase your pet's age every x minutes NOTE 
+Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing. NOTE 
+You pet should die if Hunger, Boredom, or Sleepiness hits 10. NOTE 
+Morph your pet at certain ages. NOTE 
 Animate your pet across the screen while it's alive.
 
 GA project 1 NOTE
@@ -60,5 +58,5 @@ SCREEN ANIMATION
 
 // EXTRA STUFF
 - some sort of interaction.
-
+ DONT ALERT. OR PROMPT.
 

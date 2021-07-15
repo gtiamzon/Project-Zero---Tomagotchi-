@@ -27,8 +27,7 @@
       </h3>
     </div>
     <div class="rowThree">
-      <input type="text" id="textInput" required
-      size="10" placeholder="Your Name!!!">
+      <input type="text" id="textInput" class="input" placeholder="ENTER NAME HERE!">
       <div id="timer">Time:</div>
     </div>
     <div class="rowFour">
@@ -36,18 +35,31 @@
     </div>
     
   </header>
+  
   <main class= "image">
     <img id="img"src = "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
   </main>
-  <div class="stats">
-    <p id= "medBar">Meditation: 100</p>
-    <p id= "trainBar">Training: 100</p>
-    <p id= "hungerBar">Hunger: 100</p>
+  <div id="stats" class="container">
+
+      <div class="progress primary">
+        <div class="bar" id="medNumber"></div>
+        <div class="subtitle">Meditation</div>
+      </div>
+
+      <div class="progress success">
+        <div class="bar" id="trainNumber"></div>
+        <div class="subtitle">Training</div>
+      </div>
+
+      <div class="progress warning">
+        <div class="bar" id="hungerNumber"></div>
+        <div class="subtitle">warning</div>
+      </div>
   </div>
   <nav>
-    <button id="meditateButton">Meditate</button>
-    <button id="trainButton">Train</button>
-    <button id="hungerButton">Eat</button>
-    <button id="lightSwitch">Light</button>
+    <button id="meditateButton" class="btn primary">Meditate</button>
+    <button id="trainButton" class="btn success">Train</button>
+    <button id="hungerButton" class="btn warning">Eat</button>
+    <button id="lightSwitch" class="btn error">Light</button>
   </nav>
 </body>

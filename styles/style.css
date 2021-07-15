@@ -10,7 +10,9 @@ body {
   }
 
 h1 {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
 }
 
 .rowTwo {
@@ -20,6 +22,18 @@ h1 {
   transform:translate(0px, -60px);
 }
 
+#name {
+  width: 150px;
+}
+
+#nameInput {
+  transform: translate(0px, 10px);
+}
+
+#levelInput{
+  transform: translate(0px, 10px);
+}
+
 .rowThree {
   display: flex;
   justify-content: center;
@@ -27,8 +41,12 @@ h1 {
   transform:translate(0px, -40px);
 }
 
+#textInput{
+  transform: translate(25px, 0px);
+}
+
 #timer {
-  transform: translate(0px, 10px);
+  transform: translate(-50px, 20px);
 }
 
 #img {
@@ -44,9 +62,16 @@ h1 {
   filter: brightness(30%);
 
 }
+#stats{
+  width: 500px;
+}
 
-.stats{
-  display: flex;
-  gap: 5%;
-  text-align: center;
+#medNumber{
+  width: 100%;
+}
+#hungerNumber {
+  width: 100%;
+}
+#trainNumber {
+  width: 100%;
 }

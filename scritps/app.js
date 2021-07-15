@@ -47,10 +47,18 @@ const avatar = {
     };
   },
 
+  //https://www.nicepng.com/png/full/157-1575405_aang-png.png
+
   updateName() {
     const newName = $('#textInput').val();
     $('#nameInput').text(`${newName}`);
     $('#textInput').hide();
+  },
+
+  //DEATH PAGE
+
+  death() {
+    $('h1').text('THE FIRE NATION HAS TAKEN OVER');
   },
 
 
@@ -60,13 +68,14 @@ const avatar = {
   reduceMedLife() {
     avatar.timeMedSub = setInterval(function(){
       avatar.meditate = avatar.meditate -1;
-      $('#medBar').text(`Meditation: ${avatar.meditate}`);
+      $('#medNumber').css('width', `${avatar.meditate}%`);
       if(avatar.meditate <=0 ){
-        alert(`you died`);
+        avatar.death();
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
         clearInterval(avatar.timer);
+        
       }
     }, 500);
   },
@@ -77,9 +86,9 @@ const avatar = {
   reduceTrainLife() {
     avatar.timeTrainSub = setInterval(function(){
       avatar.train = avatar.train -1; 
-      $('#trainBar').text(`Training: ${avatar.train}`);
+      $('#trainNumber').css('width', `${avatar.train}%`);
       if(avatar.train <=0 ){
-        alert(`you died`);
+        avatar.death();
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
@@ -94,9 +103,9 @@ const avatar = {
   reduceHungerLife() {
     avatar.timeHungerSub = setInterval(function(){
       avatar.hunger = avatar.hunger - 1;
-      $('#hungerBar').text(`Hunger: ${avatar.hunger}`);
+      $('#hungerNumber').css('width', `${avatar.hunger}%`);
       if(avatar.hunger <=0 ){
-        alert(`you died`);
+        avatar.death();
         clearInterval(avatar.timeHungerSub);
         clearInterval(avatar.timeTrainSub);
         clearInterval(avatar.timeMedSub);
@@ -120,7 +129,7 @@ $("#start").click(function(){
 $("#meditateButton").click(function() {
   if(avatar.meditate < 100) {
     avatar.meditate = avatar.meditate +5;
-    $('#medBar').text(`Meditation: ${avatar.meditate}`)
+    $('#meditateNumber').css('width', `${avatar.meditate}%`);
     return(avatar.meditate);
   }  
 });
@@ -128,7 +137,7 @@ $("#meditateButton").click(function() {
 $("#trainButton").click(function() {
   if(avatar.train < 100) {
     avatar.train = avatar.train +5;
-    $('#trainBar').text(`Training: ${avatar.train}`)
+    $('#trainNumber').css('width', `${avatar.train}%`);
     return(avatar.train);
   }  
 });
@@ -136,7 +145,7 @@ $("#trainButton").click(function() {
 $("#hungerButton").click(function() {
   if(avatar.hunger < 100) {
     avatar.hunger = avatar.hunger +5;
-    $('#hungerBar').text(`Hunger: ${avatar.hunger}`)
+    $('#hungerNumber').css('width', `${avatar.hunger}%`);
     return(avatar.hunger);
   }  
 });
