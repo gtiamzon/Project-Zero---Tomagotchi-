@@ -36,6 +36,7 @@ const avatar = {
       $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
       $('h1').text('YOU ARE THE AVATAR');
       $('body').css('color', 'orange');
+      $('#img.active').css('animation-duration', '1s')
     };
   },
   //NAME INPUT UPDATE
@@ -54,7 +55,7 @@ const avatar = {
   timeMedSub: null,
   reduceMedLife() {
     avatar.timeMedSub = setInterval(function(){
-      avatar.meditate = avatar.meditate -1;
+      avatar.meditate = avatar.meditate -5;
       $('#medNumber').css('width', `${avatar.meditate}%`);
       if(avatar.meditate <=0 ){
         avatar.death();
@@ -64,13 +65,13 @@ const avatar = {
         clearInterval(avatar.timer);
         $(`#img`).toggleClass(`active`);
       }
-    }, 300);
+    }, 2000);
   },
   // Training Number Decrease
   timeTrainSub: null,
   reduceTrainLife() {
     avatar.timeTrainSub = setInterval(function(){
-      avatar.train = avatar.train -1; 
+      avatar.train = avatar.train -5; 
       $('#trainNumber').css('width', `${avatar.train}%`);
       if(avatar.train <=0 ){
         avatar.death();
@@ -80,13 +81,13 @@ const avatar = {
         clearInterval(avatar.timer);
         $(`#img`).toggleClass(`active`);
       }
-    }, 200);
+    }, 1900);
   },
   // Hunger Number Decrease
   timeHungerSub:null, 
   reduceHungerLife() {
     avatar.timeHungerSub = setInterval(function(){
-      avatar.hunger = avatar.hunger - 1;
+      avatar.hunger = avatar.hunger - 5;
       $('#hungerNumber').css('width', `${avatar.hunger}%`);
       if(avatar.hunger <=0 ){
         avatar.death();
@@ -96,7 +97,7 @@ const avatar = {
         clearInterval(avatar.timer);
         $(`#img`).toggleClass(`active`);
       }
-    }, 100);
+    }, 1000);
   },
 };
 //START BUTTON
@@ -107,11 +108,11 @@ $("#start").click(function(){
   avatar.timerStart();
   avatar.updateName();
   $(`#img`).toggleClass(`active`);
-  $(`#start`).hide();
+  $(`#startPage`).hide();
 }),
 //MEDITATE BUTTON FUNCTION
 $("#meditateButton").click(function() {
-  if(avatar.meditate < 100) {
+  if(avatar.meditate <= 100) {
     avatar.meditate = avatar.meditate +5;
     $('#meditateNumber').css('width', `${avatar.meditate}%`);
     return(avatar.meditate);

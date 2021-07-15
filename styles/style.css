@@ -9,7 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
   }
   /* TOP SECTION  */
 main {
@@ -33,25 +32,11 @@ h1 {
   width: 150px;
   padding-top: 20px;
 }
-.rowThree {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 30px;
-  
-}
 #timer {
   justify-content: center;
   align-items: center;
 }
-#textInput {
-  margin-left: 50px; 
-  width: 300px; 
-  padding-left: 55px;
-  z-index: 1;
-}
-#start {
-  margin-left: 150px;
-}
+
 /* IMAGE SECTION */
 #img {
   max-width: 500px;
@@ -91,5 +76,34 @@ h1 {
 nav{
   padding: 20px;
 }
+/* START SCREEN */
+#startPage {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 860px;
+  height: 830px;
+  z-index: 1;
+}
+#textInput{
+  z-index: 1;
+  text-align: center;
+  width: 300px;
+}
+
+#startLogo{
+  width: 300px;
+  height: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#start {
+  margin-top: 50px;
+}
+
 
 
