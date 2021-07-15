@@ -11,75 +11,60 @@ body {
   text-align: center;
   overflow: hidden;
   }
-
-  main{
-    max-height: 100vh;
-    position: fixed;
-    min-width: 823px;
-    
-  }
-
-  h1 {
-    padding-top: 60px;
-  }
-
-
+  /* TOP SECTION  */
+main {
+  max-height: 100vh;
+  position: fixed;
+  min-width: 823px;
+}
+h1 {
+  padding-top: 60px;
+}
 .rowTwo {
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
 }
-
-#start {
- margin-left: 150px;
-}
-
 #nameInput {
   width: 250px;
   padding-top: 20px;
 }
-
 #levelInput{
   width: 150px;
   padding-top: 20px;
 }
-
 .rowThree {
   display: flex;
   flex-direction: row;
   padding-bottom: 30px;
   
 }
-
-#textInput{
+#timer {
+  justify-content: center;
+  align-items: center;
+}
+#textInput {
   margin-left: 50px; 
   width: 300px; 
   padding-left: 55px;
   z-index: 1;
 }
-
-#timer {
-  justify-content: center;
-  align-items: center;
+#start {
+  margin-left: 150px;
 }
-
-
+/* IMAGE SECTION */
 #img {
   max-width: 500px;
   max-height: 500px;
 }
-
-#img.active{
+#img.active {
   max-width: 500px;
   max-height: 500px;
-
   animation: headShake;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-
 }
-
-#image{
+#image {
   background-color:white;
   justify-content: center;
   align-items: center;
@@ -88,15 +73,13 @@ body {
   background-color: grey;
   filter: brightness(30%);
 }
-
-#stats{
+/* BAR SECTION */
+#stats {
   display: flex;
   justify-content: center;
 }
-
-#medNumber{
+#medNumber {
   width: 100%;
-  
 }
 #hungerNumber {
   width: 100%;
@@ -104,15 +87,9 @@ body {
 #trainNumber {
   width: 100%;
 }
-
+/* BUTTON SECTION */
 nav{
   padding: 20px;
 }
 
-@media screen and (max-width:375px)  {
-  .main {
-    background-color: red !important;
-    width: 100px !important;
-  }
-}
 

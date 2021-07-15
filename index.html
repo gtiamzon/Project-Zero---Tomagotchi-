@@ -14,55 +14,51 @@
   <!-- Main JS -->
   <script src="scritps/app.js" defer></script>
 </head>
-<body>
-<main class="container main">
-  <section class="container">
-    <h1>BECOME THE AVATAR</h1>
-    <div class="rowTwo">
-      <h3 id="name" class ="container dark">
-        <label class="title">NAME</label>
-        <p id="nameInput"></p>
-      </h3>
-      <h3 id="level" class="container dark">
-        <label class=title>LEVEL</label>
-        <p id="levelInput">1</p>
-      </h3>
-    </div>
-    <div class= "threepointfive">
-      <h2 id="timer">TIME:</h2>
-    </div>
-    <div class="rowThree">
-      <input type="text" id="textInput" class="input" placeholder="ENTER NAME HERE">
-      <button  id="start" class="btn">START</button>
-    </div>
-  </section>
-  
-  <main id="image" class= "container">
-    <img id="img" src = "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
-  </main>
-  <div id="stats" class="container">
-
-      <div class="progress primary">
-        <div class="bar" id="medNumber"></div>
-        <!-- <div class="subtitle">Meditation</div> -->
+  <body>
+    <main class="container main">
+      <section class="container">
+        <h1>BECOME THE AVATAR</h1>
+          <div class="rowTwo">
+            <h3 id="name" class ="container dark">
+              <label class="title">NAME</label>
+              <p id="nameInput"></p>
+            </h3>
+            <h3 id="level" class="container dark">
+              <label class=title>LEVEL</label>
+              <p id="levelInput">1</p>
+            </h3>
+          </div>
+          <div class= "threepointfive">
+            <h2 id="timer">TIME:</h2>
+          </div>
+          <div class="rowThree">
+            <input type="text" id="textInput" class="input" placeholder="ENTER NAME HERE">
+            <button  id="start" class="btn">START</button>
+          </div>
+      </section>
+      <main id="image" class= "container">
+        <img id="img" src = "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
+      </main>
+      <div id="stats" class="container">
+        <div class="progress primary">
+          <div class="bar" id="medNumber">       
+          </div>
+        </div>
+        <div class="progress success">
+          <div class="bar" id="trainNumber">
+          </div>
+        </div>
+        <div class="progress warning">
+          <div class="bar" id="hungerNumber">
+          </div>
+        </div>
       </div>
-
-      <div class="progress success">
-        <div class="bar" id="trainNumber"></div>
-        <!-- <div class="subtitle">Training</div> -->
-      </div>
-
-      <div class="progress warning">
-        <div class="bar" id="hungerNumber"></div>
-        <!-- <div class="subtitle">Hunger</div> -->
-      </div>
-  </div>
-  <nav>
-    <button id="meditateButton" class="btn primary">Meditate</button>
-    <button id="trainButton" class="btn success">Train</button>
-    <button id="hungerButton" class="btn warning">Eat</button>
-    <button id="lightSwitch" class="btn error">Light</button>
-  </nav>
-</main>
-</body>
+      <nav>
+        <button id="meditateButton" class="btn primary">Meditate</button>
+        <button id="trainButton" class="btn success">Train</button>
+        <button id="hungerButton" class="btn warning">Eat</button>
+        <button id="lightSwitch" class="btn error">Light</button>
+      </nav>
+    </main>
+  </body>
 </html>
