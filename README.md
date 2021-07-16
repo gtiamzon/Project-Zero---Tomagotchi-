@@ -205,4 +205,22 @@ $("#start").click(function(){
 
 - The start button is also the way the game starts. Calling all of the fucntions to start the timer, and reduce the bars. 
 
+### ISSUES
 
+- One big issue I ended up encountering is CSS styling. The framework I used isnt very css friendly. Adjsuting margins and other parts in css would make the whole thing look wierd. So just working around the quirks I were encountering was a challenge.
+
+- Another challenge I encountered was scaling the game to fit into a smaller window. Even putting fixed pixels on the body would let it go smaller. 
+
+- I think the code could be cleaned up alot. its alot of repetition can could probably be put into a method and called on multiple times. 
+
+### Frameworks
+
+### SOURCES
+
+https://98mprice.github.io/PSone.css/ --- CSS FRAMEWORK
+https://animate.style/ --- CSS ANIMATION
+https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png --- AANG IMAGE YOUNG
+https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png --- AANG LEVEL UP IMAGE
+https://www.nicepng.com/png/full/157-1575405_aang-png.png --- AANG FINAL FORM IMAGE
+https://i.imgur.com/JkMp8L8.jpeg --- DARK SOULS DEATH IMAGE
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png --- PLAYSTATION LOGO
