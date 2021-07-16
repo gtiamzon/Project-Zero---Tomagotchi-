@@ -110,10 +110,18 @@ const avatar = {
       }
     }, 800);
   },
+
+  // AUDIO ADJUSTMENT
+  play(){
+  const audio = document.getElementById("audio");
+  audio.play();
+  audio.volume = 0.2;
+  },
 };
 
 //START BUTTON
 $("#start").click(function(){
+  avatar.play();
   avatar.reduceMedLife();
   avatar.reduceTrainLife();
   avatar.reduceHungerLife();
@@ -156,6 +164,4 @@ $('#lightSwitch').click(function(){
   }
 );
 
-// AUDIO ADJUSTMENT
-const audio = document.getElementById("audio");
-audio.volume = 0.2;
+
