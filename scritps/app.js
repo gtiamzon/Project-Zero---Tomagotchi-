@@ -4,6 +4,7 @@ const avatar = {
   train: 100,
   hunger: 100,
   level: 1,
+  
   //TIMER
   timer: null,
   time: 0,
@@ -16,6 +17,7 @@ const avatar = {
       $('#timer').text(`TIME: ${avatar.time}`);
     }, 1000);
   },
+
   //LEVEL UP
   levelUP(){
     if(avatar.time % 10 === 0 ){
@@ -23,6 +25,7 @@ const avatar = {
       $('#levelInput').text(`${avatar.level}`);
     };
   },
+  
   //IMAGE CHANGE LEVEL UP
   transform() {
     if(avatar.level >= 4){
@@ -31,6 +34,7 @@ const avatar = {
       $('#img.active').css({'animation': 'swing','animation-duration': '4s','animation-iteration-count': 'infinite'});
     };
   },
+  
   //IMAGE CHANGE FINAL FORM
   finalForm() {
     if(avatar.level >= 8){
@@ -40,12 +44,14 @@ const avatar = {
       $('#img.active').css({'animation': 'tada','animation-duration': '2s','animation-iteration-count': 'infinite'});
     };
   },
+  
   //NAME INPUT UPDATE
   updateName() {
     const newName = $('#textInput').val();
     $('#nameInput').text(`${newName}`);
     $('#textInput').hide();
   },
+  
   //DEATH PAGE
   death() {
     $('h1').text('THE FIRE NATION HAS TAKEN OVER');
@@ -53,6 +59,7 @@ const avatar = {
     $('#img').attr("src", "https://i.imgur.com/JkMp8L8.jpeg");
     $('#timer').text(`YOU LASTED ${avatar.time} SECONDS`)
   },
+  
   // Meditation Number Decrease
   timeMedSub: null,
   reduceMedLife() {
@@ -69,6 +76,7 @@ const avatar = {
       }
     }, 1500);
   },
+  
   // Training Number Decrease
   timeTrainSub: null,
   reduceTrainLife() {
@@ -85,6 +93,7 @@ const avatar = {
       }
     }, 1100);
   },
+  
   // Hunger Number Decrease
   timeHungerSub:null, 
   reduceHungerLife() {
@@ -102,6 +111,7 @@ const avatar = {
     }, 800);
   },
 };
+
 //START BUTTON
 $("#start").click(function(){
   avatar.reduceMedLife();
@@ -112,6 +122,7 @@ $("#start").click(function(){
   $(`#img`).toggleClass(`active`);
   $(`#startPage`).hide();
 }),
+
 //MEDITATE BUTTON FUNCTION
 $("#meditateButton").click(function() {
   if(avatar.meditate <= 100) {
@@ -120,6 +131,7 @@ $("#meditateButton").click(function() {
     return(avatar.meditate);
   }  
 });
+
 //TRAINING BUTTON FUNCTION
 $("#trainButton").click(function() {
   if(avatar.train < 100) {
@@ -128,6 +140,7 @@ $("#trainButton").click(function() {
     return(avatar.train);
   }  
 });
+
 //HUNGER BUTTON FUNCTION
 $("#hungerButton").click(function() {
   if(avatar.hunger < 100) {
@@ -136,6 +149,7 @@ $("#hungerButton").click(function() {
     return(avatar.hunger);
   }  
 });
+
 // LIGHT BUTTON
 $('#lightSwitch').click(function(){
   $("#image").toggleClass("active");

@@ -221,19 +221,26 @@ $("#start").click(function(){
 
 ### SOURCES
 
---- CSS FRAMEWORK
+- CSS FRAMEWORK
 https://98mprice.github.io/PSone.css/ 
---- CSS ANIMATION
+
+- CSS ANIMATION
 https://animate.style/ 
- --- AANG IMAGE YOUNG
+ 
+- AANG IMAGE YOUNG
 https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png
---- AANG LEVEL UP IMAGE
+
+- AANG LEVEL UP IMAGE
 https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png 
---- AANG FINAL FORM IMAGE
+
+- AANG FINAL FORM IMAGE
 https://www.nicepng.com/png/full/157-1575405_aang-png.png 
---- DARK SOULS DEATH IMAGE
+
+- DARK SOULS DEATH IMAGE
 https://i.imgur.com/JkMp8L8.jpeg 
---- PLAYSTATION LOGO
+
+- PLAYSTATION LOGO
 https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png 
---- SET/CLEAR INTERVAL HELP
+
+- SET/CLEAR INTERVAL HELP
 https://www.bitdegree.org/learn/javascript-setinterval 
