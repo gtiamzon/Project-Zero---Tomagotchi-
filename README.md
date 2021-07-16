@@ -213,7 +213,11 @@ $("#start").click(function(){
 
 - I think the code could be cleaned up alot. its alot of repetition can could probably be put into a method and called on multiple times. 
 
-### Frameworks
+### WIREFRAMES
+
+![WIREFRAME](https://imgur.com/8Rb4euB)
+
+![WIREFRAME](https://imgur.com/Y6iTeve)
 
 ### SOURCES
 
@@ -224,3 +228,4 @@ https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-
 https://www.nicepng.com/png/full/157-1575405_aang-png.png --- AANG FINAL FORM IMAGE
 https://i.imgur.com/JkMp8L8.jpeg --- DARK SOULS DEATH IMAGE
 https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png --- PLAYSTATION LOGO
+https://www.bitdegree.org/learn/javascript-setinterval --- SET/CLEAR INTERVAL HELP

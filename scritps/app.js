@@ -25,7 +25,7 @@ const avatar = {
   },
   //IMAGE CHANGE LEVEL UP
   transform() {
-    if(avatar.level >= 2){
+    if(avatar.level >= 4){
       $('#img').attr("src", "https://snworksceo.imgix.net/dpn-34s/8c34cbde-ec36-4894-9c7c-a1ed3dc92a7b.sized-1000x1000.png");
       $('body').css('color', 'palegreen');
       $('#img.active').css({'animation': 'swing','animation-duration': '4s','animation-iteration-count': 'infinite'});
@@ -33,7 +33,7 @@ const avatar = {
   },
   //IMAGE CHANGE FINAL FORM
   finalForm() {
-    if(avatar.level >= 3){
+    if(avatar.level >= 8){
       $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
       $('h1').text('YOU HAVE MASTERED ALL ELEMENTS');
       $('body').css('color', 'orange');
@@ -67,7 +67,7 @@ const avatar = {
         clearInterval(avatar.timer);
         $('#img.active').css({'animation': 'none',});
       }
-    }, 2000);
+    }, 1500);
   },
   // Training Number Decrease
   timeTrainSub: null,
@@ -83,7 +83,7 @@ const avatar = {
         clearInterval(avatar.timer);
         $('#img.active').css({'animation': 'none',});
       }
-    }, 1900);
+    }, 1100);
   },
   // Hunger Number Decrease
   timeHungerSub:null, 
@@ -99,7 +99,7 @@ const avatar = {
         clearInterval(avatar.timer);
         $('#img.active').css({'animation': 'none',});
       }
-    }, 1000);
+    }, 800);
   },
 };
 //START BUTTON
