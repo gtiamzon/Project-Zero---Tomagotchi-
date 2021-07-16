@@ -215,9 +215,9 @@ $("#start").click(function(){
 
 ### WIREFRAMES
 
-![WIREFRAME](https://imgur.com/8Rb4euB)
+![WIREFRAME](https://i.imgur.com/8Rb4euB.png)
 
-![WIREFRAME](https://imgur.com/Y6iTeve)
+![WIREFRAME](https://i.imgur.com/Y6iTeve.png)
 
 ### SOURCES
 
