@@ -35,7 +35,7 @@ const avatar = {
   finalForm() {
     if(avatar.level >= 3){
       $('#img').attr("src", "https://www.nicepng.com/png/full/157-1575405_aang-png.png");
-      $('h1').text('YOU ARE THE AVATAR');
+      $('h1').text('YOU HAVE MASTERED ALL ELEMENTS');
       $('body').css('color', 'orange');
       $('#img.active').css({'animation': 'tada','animation-duration': '2s','animation-iteration-count': 'infinite'});
     };
